@@ -23,11 +23,11 @@ async function bootstrap() {
   return app;
 }
 
-export const handler = async (req: Request, res: Response) => {
+export default async function handler(req: Request, res: Response) {
   const app: INestApplication = await bootstrap();
   const server = serverless(app.getHttpServer());
   return server(req, res);
-};
+}
 
 if (process.env.NODE_ENV !== 'production') {
   bootstrap();
