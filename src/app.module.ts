@@ -15,11 +15,11 @@ import { Taxi } from './taxis/entities/taxi.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'mysql-dylantest.alwaysdata.net',
       port: 3306,
-      username: 'root',
-      password: '',
-      database: 'taxiapp',
+      username: 'dylantest',
+      password: '4}wrg4wN}Q.t',
+      database: 'dylantest_taxihouse',
       entities: [User, Role, Driver, Taxi],
       synchronize: true,
     }),
